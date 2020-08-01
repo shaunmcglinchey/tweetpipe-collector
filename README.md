@@ -22,5 +22,5 @@ The project can be run from within an IDE (such as IntelliJ) or directly from th
 * Set destination Kafka topic via application.yml kafka.topic property
 * mvn clean spring-boot:run
 
-* Once the embedded server has started the service will connect to the Twitter stream and filter the incoming tweets 
+* Once started the application will connect to the Twitter stream and filter the incoming tweets 
 by the configured query track terms and push the matching tweets to the destination Kafka topic
