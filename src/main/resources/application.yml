@@ -3,5 +3,5 @@ kafka:
   topic: tracking
   track:
     query:
-      terms: nike, tesla, trump
+      terms: nike, tesla, nasa
       languages: en
