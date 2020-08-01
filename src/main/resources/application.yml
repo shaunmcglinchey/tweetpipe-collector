@@ -1,6 +1,6 @@
 kafka:
   server: localhost:9092
-  topic: foobar
+  topic: tracking
   track:
     query:
       terms: nike, tesla, trump
