@@ -1,0 +1,7 @@
+kafka:
+  server: localhost:9092
+  topic: foobar
+  track:
+    query:
+      terms: nike, tesla, trump
+      languages: en
