@@ -1,7 +1,9 @@
 TweetPipe
 ==============
 Spring Boot web application with Twitter hosepipe integration - filters an incoming Twitter stream 
-by a set of desired keywords and pushes the corresponding tweets to a destination Kafka topic
+by a set of desired keywords and pushes the corresponding tweets to a destination Kafka topic.
+
+This application forms the first stage (data collection and propagation to the messaging tier) of the TweetPipe Data Pipeline.
 
 Technologies used
 --------------
