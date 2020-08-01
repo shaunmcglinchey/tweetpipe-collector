@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <name>TweetPipeCollector</name>
-    <description>Collecting Tweets from Twitter firehose and send them to Kafka</description>
+    <description>Filter Tweets from Twitter firehose by desired terms and send matching tweets to a destination Kafka topic</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
