@@ -16,8 +16,8 @@ public class TweetPipeConfig {
     private String[] queryLanguages;
 
     public TweetPipeConfig(TwitterListener twitterListener,
-                           @Value("${kafka.track.query.terms}") String[] queryTerms,
-                           @Value("${kafka.track.query.languages}") String[] queryLanguages) {
+                           @Value("${twitter.query.terms}") String[] queryTerms,
+                           @Value("${twitter.query.languages}") String[] queryLanguages) {
         this.twitterListener = twitterListener;
         this.queryTerms = queryTerms;
         this.queryLanguages = queryLanguages;

@@ -1,7 +1,18 @@
-kafka:
-  server: localhost:9092
-  topic: tracking
-  track:
-    query:
-      terms: nike, tesla, nasa
-      languages: en
+twitter:
+  query:
+    terms: nike, tesla, nasa
+    languages: en
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          content-type: text/plain
+          destination: tracking
+          producer:
+            partitionCount: 1
+            headerMode: raw
+      kafka:
+        binder:
+          brokers: localhost:9092
