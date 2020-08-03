@@ -13,7 +13,7 @@ Technologies used
 * Kafka
 * Twitter4J
 * Lombok
-* Spring-Kafka
+* Spring Cloud Stream
 
 
 Running instructions
