@@ -8,7 +8,7 @@ spring:
     stream:
       bindings:
         output:
-          content-type: text/plain
+          content-type: application/json
           destination: tracking
           producer:
             partitionCount: 1

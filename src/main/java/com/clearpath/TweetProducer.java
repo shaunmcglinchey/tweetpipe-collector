@@ -18,8 +18,8 @@ public class TweetProducer {
     }
 
     public void sendTweet(TwitterStatusReceived statusReceived) {
-        source.output()
-                .send(MessageBuilder.withPayload(statusReceived).build(),
+        source.output().send(
+                MessageBuilder.withPayload(new Tweet(statusReceived.getStatus().getText())).build(),
                         SENDING_MESSAGE_TIMEOUT_MS);
     }
 }
