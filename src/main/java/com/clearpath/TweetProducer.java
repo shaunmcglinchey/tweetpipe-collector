@@ -17,9 +17,7 @@ public class TweetProducer {
         this.source = source;
     }
 
-    public void sendTweet(TwitterStatusReceived statusReceived) {
-        source.output().send(
-                MessageBuilder.withPayload(new Tweet(statusReceived.getStatus().getText())).build(),
-                        SENDING_MESSAGE_TIMEOUT_MS);
+    public void sendTweet(Tweet tweet) {
+        source.output().send(MessageBuilder.withPayload(tweet).build(), SENDING_MESSAGE_TIMEOUT_MS);
     }
 }

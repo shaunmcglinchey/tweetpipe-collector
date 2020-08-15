@@ -1,6 +1,6 @@
 package com.clearpath;
 
-import org.springframework.context.ApplicationEventPublisher;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 import twitter4j.StallWarning;
 import twitter4j.Status;
@@ -8,17 +8,14 @@ import twitter4j.StatusDeletionNotice;
 import twitter4j.StatusListener;
 
 @Component
+@AllArgsConstructor
 public class TwitterListener implements StatusListener {
 
-    private ApplicationEventPublisher applicationEventPublisher;
-
-    public TwitterListener(ApplicationEventPublisher applicationEventPublisher) {
-        this.applicationEventPublisher = applicationEventPublisher;
-    }
+    private TweetProducer tweetProducer;
 
     @Override
     public void onStatus(Status status) {
-        applicationEventPublisher.publishEvent(new TwitterStatusReceived(this, status));
+        tweetProducer.sendTweet(new Tweet(status.getText()));
     }
 
     @Override
